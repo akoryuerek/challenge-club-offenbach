@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Challenge Club Offenbach · Boxen mit Herz</title>
+<meta name="description" content="Challenge Club Offenbach – Boxen, Thai- & Kickboxen, Frauen Fitness Boxen, Jugendboxen und Fitness. Schreberstraße 6, 63069 Offenbach.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23d71920'/><text x='50' y='68' font-size='54' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' fill='white'>C</text></svg>">
+<style>
+:root{--bg:#0b0b0c;--bg2:#141416;--ink:#f4f1ea;--mute:#a19d95;--red:#d71920;--red2:#ff3b30;--gold:#c9a24a;--line:#26262a;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.display{font-family:"Arial Black","Helvetica Neue",Impact,Arial,sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92;text-transform:uppercase}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--red2);font-weight:700}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;padding:calc(env(safe-area-inset-top) + 12px) 0 12px;transition:background .3s,backdrop-filter .3s}
+header.solid{background:rgba(11,11,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{display:grid;place-items:center;width:38px;height:38px;border-radius:9px;background:var(--red);font:900 20px "Arial Black",Arial;color:#fff}
+.logo span{font:900 14px/1 "Arial Black",Arial;letter-spacing:.06em;text-transform:uppercase}
+.logo small{display:block;font:600 10px/1.4 -apple-system,Arial;letter-spacing:.3em;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--red);color:#fff;font-weight:800;text-decoration:none;letter-spacing:.02em;border:0;cursor:pointer;transition:transform .15s,background .2s;font-size:16px}
+.btn:hover{background:var(--red2)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;border:1.5px solid #3a3a40}
+.btn.sm{min-height:40px;padding:0 16px;font-size:14px}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 56px;isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 70% at 80% 10%,rgba(215,25,32,.38),transparent 60%),radial-gradient(80% 60% at 0% 100%,rgba(201,162,74,.12),transparent 60%),var(--bg)}
+.ring{position:absolute;z-index:-1;right:-30vw;top:8vh;width:110vw;max-width:900px;aspect-ratio:1;opacity:.5}
+.ring line{stroke:#2a2a2f;stroke-width:2}.ring line.r{stroke:var(--red);stroke-width:3}
+.hero h1{font-size:clamp(52px,15vw,148px)}
+.hero h1 em{font-style:normal;color:var(--red);display:block}
+.hero p.lead{max-width:540px;margin:22px 0 28px;color:#d6d2ca;font-size:clamp(17px,2.2vw,20px)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px;color:var(--mute);font-size:14px}
+.hero .meta span::before{content:"●";color:var(--red);margin-right:8px;font-size:9px;vertical-align:2px}
+.word{display:inline-block;opacity:0;transform:translateY(40px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
+.word:nth-child(2){animation-delay:.12s}.word:nth-child(3){animation-delay:.24s}
+@keyframes up{to{opacity:1;transform:none}}
+/* ticker */
+.ticker{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;border-block:1px solid #ff4b45}
+.ticker div{display:inline-block;padding:14px 0;animation:tick 28s linear infinite;font:900 15px "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+.ticker i{font-style:normal;opacity:.55;margin:0 18px}
+@keyframes tick{to{transform:translateX(-50%)}}
+section{padding:88px 0}
+.h2{font-size:clamp(38px,8vw,76px);margin:12px 0 18px}
+.sub{color:var(--mute);max-width:620px}
+/* legacy */
+.legacy{display:grid;gap:28px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px}
+.stat b{display:block;font:900 clamp(34px,7vw,52px)/1 "Arial Black",Arial;color:var(--ink)}
+.stat b sup{color:var(--red);font-size:.5em}
+.stat span{color:var(--mute);font-size:14px}
+.quote{border-left:4px solid var(--red);padding:6px 0 6px 20px;font-size:clamp(20px,3.4vw,28px);font-weight:700;line-height:1.3}
+.quote small{display:block;margin-top:10px;font-size:13px;font-weight:500;color:var(--mute);letter-spacing:.06em}
+/* programs */
+.cards{display:grid;gap:14px;margin-top:36px}
+.card{position:relative;background:linear-gradient(180deg,#17171a,#111113);border:1px solid var(--line);border-radius:18px;padding:26px 22px 24px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:#44262a}
+.card .n{position:absolute;right:16px;top:8px;font:900 64px/1 "Arial Black",Arial;color:#1f1f23}
+.card h3{font:900 22px/1.1 "Arial Black",Arial;text-transform:uppercase;margin:6px 0 10px;position:relative}
+.card p{color:#bcb8b0;font-size:15.5px;position:relative}
+.card .tag{display:inline-block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+/* timer */
+.timer{background:var(--bg2);border-block:1px solid var(--line)}
+.tbox{display:grid;gap:26px;align-items:center}
+.clock{position:relative;width:min(320px,80vw);aspect-ratio:1;margin-inline:auto}
+.clock svg{width:100%;height:100%;transform:rotate(-90deg)}
+.clock circle{fill:none;stroke-width:10}
+.clock .bgc{stroke:#25252a}.clock .fg{stroke:var(--red);stroke-linecap:round;transition:stroke-dashoffset .25s linear,stroke .3s}
+.clock.rest .fg{stroke:var(--gold)}
+.clock .lbl{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.clock .t{font:900 clamp(54px,15vw,76px)/1 "Arial Black",Arial;font-variant-numeric:tabular-nums}
+.clock .ph{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.tctl{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.seg{display:flex;gap:6px;justify-content:center;margin-bottom:14px}
+.seg button{background:#1d1d21;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:700;font-size:14px;cursor:pointer}
+.seg button.on{background:var(--ink);color:#111}
+/* youth */
+.youth{position:relative;overflow:hidden}
+.youth .big{position:absolute;right:-4vw;bottom:-3vw;font:900 clamp(120px,30vw,320px)/.8 "Arial Black",Arial;color:#131315;z-index:-1;user-select:none}
+.events{display:grid;gap:12px;margin-top:30px}
+.ev{display:flex;gap:16px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.ev .d{flex:none;width:62px;text-align:center;border-right:1px solid var(--line);padding-right:14px}
+.ev .d b{display:block;font:900 26px/1 "Arial Black",Arial;color:var(--red2)}
+.ev .d span{font-size:11px;letter-spacing:.15em;color:var(--mute);text-transform:uppercase}
+.ev h4{font-size:16px}.ev p{font-size:14px;color:var(--mute)}
+/* values */
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:34px}
+.values div{background:var(--bg);padding:30px 18px;text-align:center}
+.values b{display:block;font:900 clamp(20px,4.6vw,30px)/1 "Arial Black",Arial;text-transform:uppercase}
+.values span{font-size:13px;color:var(--mute)}
+/* steps */
+.steps{display:grid;gap:14px;margin:36px 0 30px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
+.step::before{counter-increment:s;content:counter(s);flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--red);font:900 18px "Arial Black",Arial}
+.step h4{font-size:17px;margin-bottom:2px}.step p{color:var(--mute);font-size:15px}
+/* location */
+.loc{display:grid;gap:14px}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px 22px}
+.panel h3{font:900 20px "Arial Black",Arial;text-transform:uppercase;margin-bottom:12px}
+.hours div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed #2c2c31;font-size:15.5px}
+.hours div:last-child{border:0}
+footer{padding:40px 0 calc(110px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--mute);font-size:13.5px}
+footer .row{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+/* sticky mobile CTA */
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:flex;gap:10px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.dock.show{transform:none}
+.dock .btn{flex:1;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.dock .btn.ghost{flex:0 0 auto;background:rgba(20,20,22,.92);backdrop-filter:blur(10px)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.navlinks{display:none;gap:26px;font-size:14px;font-weight:600}
+.navlinks a{text-decoration:none;color:#cfcbc3}.navlinks a:hover{color:#fff}
+@media (min-width:760px){
+ .navlinks{display:flex}
+ .legacy{grid-template-columns:1.1fr .9fr;align-items:center}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .tbox{grid-template-columns:1fr 1fr}
+ .events{grid-template-columns:1fr 1fr}
+ .values{grid-template-columns:repeat(4,1fr)}
+ .steps{grid-template-columns:repeat(3,1fr)}
+ .loc{grid-template-columns:1.2fr .8fr}
+ .dock{display:none}
+ footer{padding-bottom:40px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.word,.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header id="hdr"><div class="wrap nav">
+ <a class="logo" href="#top"><b>C</b><span>Challenge Club<small>OFFENBACH</small></span></a>
+ <nav class="navlinks"><a href="#club">Der Club</a><a href="#training">Training</a><a href="#rundenuhr">Rundenuhr</a><a href="#jugend">Jugend</a><a href="#standort">Standort</a></nav>
+ <a class="btn sm" href="#probetraining">Probetraining</a>
+</div></header>
+
+<main id="top">
+<section class="hero">
+ <svg class="ring" viewBox="0 0 400 400" aria-hidden="true">
+  <line x1="40" y1="60" x2="360" y2="60" class="r"/><line x1="40" y1="110" x2="360" y2="110"/><line x1="40" y1="160" x2="360" y2="160"/>
+  <line x1="40" y1="40" x2="40" y2="380"/><line x1="360" y1="40" x2="360" y2="380"/>
+ </svg>
+ <div class="wrap">
+  <div class="kicker">Boxen · Thai- &amp; Kickboxen · Fitness</div>
+  <h1 class="display" style="margin-top:14px"><span class="word">Mut.</span> <span class="word">Disziplin.</span> <em class="word">Stärke.</em></h1>
+  <p class="lead">Echtes Boxen – leidenschaftlich, authentisch, intensiv. Die Challenge-Club-Schule aus Sachsenhausen, jetzt in Offenbach. Für Einsteiger, Amateure und alle, die ihre Grenzen testen wollen.</p>
+  <div class="ctas"><a class="btn" href="#probetraining">Probetraining sichern →</a><a class="btn ghost" href="#training">Angebot ansehen</a></div>
+  <div class="meta"><span>Schreberstraße 6</span><span>BDB-lizenzierte Trainer</span><span>Seit 2010 im Ring</span></div>
+ </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div>Boxen<i>✦</i>Thai- &amp; Kickboxen<i>✦</i>Frauen Fitness Boxen<i>✦</i>Jugend Boxen<i>✦</i>Kraft &amp; Cardio<i>✦</i>Sparring<i>✦</i>Wettkampf<i>✦</i>Boxen<i>✦</i>Thai- &amp; Kickboxen<i>✦</i>Frauen Fitness Boxen<i>✦</i>Jugend Boxen<i>✦</i>Kraft &amp; Cardio<i>✦</i>Sparring<i>✦</i>Wettkampf<i>✦</i></div></div>
+
+<section id="club"><div class="wrap legacy">
+ <div class="reveal">
+  <div class="kicker">Der Club</div>
+  <h2 class="display h2">Boxclub aus Leidenschaft.</h2>
+  <p class="sub">Was 2010 in Frankfurt-Sachsenhausen mit Udo Schmidt begann, ist heute eine feste Größe der Box- und Kampfsportszene im Rhein-Main-Gebiet. Hier trainieren Anfänger neben Profis – und lernen voneinander. Keine Show, kein Schnickschnack: Technik, Kondition, mentale Stärke.</p>
+  <div class="stats">
+   <div class="stat"><b>2010</b><span>Eröffnung des ersten Challenge Club</span></div>
+   <div class="stat"><b>BDB<sup>✓</sup></b><span>Trainer mit Profi- &amp; Amateurlizenz</span></div>
+   <div class="stat"><b>5</b><span>Disziplinen unter einem Dach</span></div>
+   <div class="stat"><b>1</b><span>Team. Ohne Ausnahme.</span></div>
+  </div>
+ </div>
+ <div class="reveal">
+  <p class="quote">„Unabhängig davon, ob du ein blutiger Anfänger, ein erfahrener Amateur oder einfach nur neugierig bist – bei uns findest du dein neues sportliches Zuhause.“<small>CHALLENGE CLUB · BOXEN MIT HERZ</small></p>
+  <p class="sub" style="margin-top:22px">Profiboxer wie Michael Seitz, Evgenios Lazaridis und Kevin Kiy haben im Challenge Club ihre Runden gedreht. Dieselbe Trainingsschule gibt es in Offenbach – lichtdurchflutete Räume, moderne Geräte, familiäre Atmosphäre.</p>
+ </div>
+</div></section>
+
+<section id="training" style="padding-top:0"><div class="wrap">
+ <div class="reveal"><div class="kicker">Training</div><h2 class="display h2">Wähle deinen Kampf.</h2>
+ <p class="sub">Anfänger und Fortgeschrittene trainieren gemeinsam. Unsere Trainer begleiten dich vom ersten Bandagieren bis zum Sparring – und wenn du willst, bis in den Wettkampf.</p></div>
+ <div class="cards">
+  <article class="card reveal"><span class="n">01</span><span class="tag">Klassisch</span><h3>Boxen</h3><p>Stand, Deckung, Beinarbeit, Kombinationen. Das Handwerk – sauber aufgebaut, vom Techniktraining bis zum Sparring.</p></article>
+  <article class="card reveal"><span class="n">02</span><span class="tag">Stand-up</span><h3>Thai- &amp; Kickboxen</h3><p>Fäuste, Tritte, Knie. Explosiv, vielseitig und eine Konditionsschule, die dich über dich hinauswachsen lässt.</p></article>
+  <article class="card reveal"><span class="n">03</span><span class="tag">Nur für Frauen</span><h3>Frauen Fitness Boxen</h3><p>Kondition, Schnelligkeit, Konzentration und Technik – in einem Kurs, der für Frauen entwickelt wurde.</p></article>
+  <article class="card reveal"><span class="n">04</span><span class="tag">12–17 Jahre</span><h3>Jugend Boxen</h3><p>Fitness und Mentalität für Jugendliche. Respekt, Fokus und Selbstvertrauen, die auch außerhalb der Halle bleiben.</p></article>
+  <article class="card reveal"><span class="n">05</span><span class="tag">Open Gym</span><h3>Kraft &amp; Cardio</h3><p>Freie Gewichte, Kraftstationen, Cardio-Geräte. Ergänzend zum Kampfsport, während der Öffnungszeiten frei nutzbar.</p></article>
+  <article class="card reveal"><span class="n">06</span><span class="tag">1:1</span><h3>Personaltraining</h3><p>Privatstunden mit lizenzierten Trainern – für schnellere Fortschritte oder die gezielte Vorbereitung auf deinen Kampf.</p></article>
+ </div>
+</div></section>
+
+<section id="rundenuhr" class="timer"><div class="wrap tbox">
+ <div class="reveal"><div class="kicker">Gratis Werkzeug</div><h2 class="display h2">Die Rundenuhr.</h2>
+ <p class="sub">Zuhause am Sandsack, im Park, beim Schattenboxen: drei Minuten Arbeit, eine Minute Pause, mit Gong. Wie im Club, nur in deiner Hosentasche.</p></div>
+ <div class="reveal">
+  <div class="seg" role="group" aria-label="Rundenlänge"><button data-w="120">2:00</button><button data-w="180" class="on">3:00</button><button data-w="10">Test 0:10</button></div>
+  <div class="clock" id="clock"><svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fg" id="arc" cx="60" cy="60" r="52"/></svg>
+   <div class="lbl"><div class="t" id="tm">3:00</div><div class="ph" id="ph">Runde 1 · bereit</div></div></div>
+  <div class="tctl" style="margin-top:20px"><button class="btn" id="go">▶ Start</button><button class="btn ghost" id="rs">Reset</button></div>
+ </div>
+</div></section>
+
+<section id="jugend" class="youth"><div class="wrap">
+ <span class="big" aria-hidden="true">NEXT</span>
+ <div class="reveal"><div class="kicker">Jugend &amp; Events</div><h2 class="display h2">Wir geben Talenten ihren ersten Kampf.</h2>
+ <p class="sub">Der Challenge Club ist nicht nur Trainingsort, sondern auch Veranstalter. Talentierte Kinder und Jugendliche sammeln bei uns ihre ersten Kampferfahrungen – und unsere Boxer stehen auf den großen Bühnen.</p></div>
+ <div class="events">
+  <div class="ev reveal"><div class="d"><b>14</b><span>Nov 26</span></div><div><h4>German Boxing Series 4</h4><p>XPOST Köln Arena – Challenge-Club-Boxer am Start.</p></div></div>
+  <div class="ev reveal"><div class="d"><b>21</b><span>Mär 26</span></div><div><h4>Kinder &amp; Jugend Box-Gala</h4><p>Die eigene Gala des Clubs – erste Kämpfe, große Bühne.</p></div></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="values reveal">
+  <div><b>Respekt</b><span>vor jedem Gegner</span></div>
+  <div><b>Selbst&shy;vertrauen</b><span>das bleibt</span></div>
+  <div><b>Spaß</b><span>an harter Arbeit</span></div>
+  <div><b>Teamgeist</b><span>in jeder Runde</span></div>
+ </div>
+</div></section>
+
+<section id="probetraining" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+ <div class="reveal"><div class="kicker">Probetraining</div><h2 class="display h2">Der erste Schritt in den Ring.</h2>
+ <p class="sub">Komm vorbei, lern die Grundlagen und teste deine Fitness. Danach weißt du, welches Training zu dir passt.</p></div>
+ <div class="steps">
+  <div class="step reveal"><div><h4>Melde dich</h4><p>Kurze Nachricht über Instagram oder einfach während der Öffnungszeiten vorbeikommen.</p></div></div>
+  <div class="step reveal"><div><h4>Bring Sportsachen mit</h4><p>Sportkleidung, Hallenschuhe, Handtuch und Wasser. Bandagen und Handschuhe kannst du an der Theke bekommen.</p></div></div>
+  <div class="step reveal"><div><h4>Steig ein</h4><p>Ein Trainer zeigt dir Bandagieren, Stand und erste Schläge. Ab dann zählt nur noch die nächste Runde.</p></div></div>
+ </div>
+ <div class="ctas reveal" style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">Probetraining anfragen →</a><a class="btn ghost" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" target="_blank" rel="noopener">Route planen</a></div>
+</div></section>
+
+<section id="standort"><div class="wrap">
+ <div class="reveal"><div class="kicker">Standort</div><h2 class="display h2">Mitten in Offenbach.</h2></div>
+ <div class="loc" style="margin-top:28px">
+  <div class="panel reveal"><h3>Challenge Club Offenbach</h3><p style="font-size:19px;font-weight:700">Schreberstraße 6<br>63069 Offenbach am Main</p>
+   <p class="sub" style="margin:12px 0 20px">Boxen · Thai- &amp; Kickboxen · Frauen Fitness Boxen · Jugend · Fitness</p>
+   <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn sm" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" target="_blank" rel="noopener">In Maps öffnen</a><a class="btn sm ghost" href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">@challengeclub_offenbach</a></div></div>
+  <div class="panel hours reveal"><h3>Öffnungszeiten</h3><div><span>Montag – Freitag</span><b>14:00 – 22:00</b></div><div><span>Wochenende</span><b>auf Anfrage</b></div><div><span>Probetraining</span><b>jederzeit</b></div></div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap row">
+ <div><b style="color:var(--ink)">CHALLENGE CLUB® OFFENBACH</b><br>Boxen mit Herz – seit 2010.</div>
+ <div>Konzeptentwurf · Inhalte vor Veröffentlichung mit dem Club abstimmen.</div>
+</div></footer>
+
+<div class="dock" id="dock"><a class="btn" href="#probetraining">Probetraining</a><a class="btn ghost" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" aria-label="Route">📍</a></div>
+
+<script>
+const hdr=document.getElementById('hdr'),dock=document.getElementById('dock');
+addEventListener('scroll',()=>{const y=scrollY;hdr.classList.toggle('solid',y>30);dock.classList.toggle('show',y>innerHeight*.6)},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// round timer
+const C=2*Math.PI*52,arc=document.getElementById('arc'),tm=document.getElementById('tm'),ph=document.getElementById('ph'),clock=document.getElementById('clock'),go=document.getElementById('go');
+arc.style.strokeDasharray=C;let work=180,rest=60,left=work,phase='work',round=1,iv=null,ac=null;
+const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+function bell(n=1){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();for(let i=0;i<n;i++){const t=ac.currentTime+i*.45,o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=880;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.6,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+1.2);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+1.3)}}catch(e){}if(navigator.vibrate)navigator.vibrate(n>1?[200,120,200]:300)}
+function draw(){const tot=phase==='work'?work:rest;tm.textContent=fmt(left);arc.style.strokeDashoffset=C*(1-left/tot);clock.classList.toggle('rest',phase==='rest');ph.textContent=(phase==='work'?'Runde '+round:'Pause')+(iv?'':' · bereit')}
+function tick(){left--;if(left===10&&phase==='work')bell(1);if(left<=0){if(phase==='work'){phase='rest';left=rest;bell(2)}else{phase='work';round++;left=work;bell(1)}}draw()}
+go.onclick=()=>{if(iv){clearInterval(iv);iv=null;go.textContent='▶ Weiter'}else{if(left===work&&phase==='work'&&round===1)bell(1);iv=setInterval(tick,1000);go.textContent='❚❚ Pause'}draw()};
+document.getElementById('rs').onclick=()=>{clearInterval(iv);iv=null;phase='work';round=1;left=work;go.textContent='▶ Start';draw()};
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');work=+b.dataset.w;rest=work===10?5:60;document.getElementById('rs').click()});
+draw();
+</script>
+</body>
+</html>
