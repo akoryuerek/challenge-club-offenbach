@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Challenge Club Offenbach · Boxen mit Herz</title>
 <meta name="description" content="Challenge Club Offenbach – Boxen, Thai- & Kickboxen, Frauen Fitness Boxen, Jugendboxen und Fitness. Schreberstraße 6, 63069 Offenbach.">
@@ -34,7 +35,7 @@ header.solid{background:rgba(11,11,12,.82);backdrop-filter:blur(14px);-webkit-ba
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 70% at 80% 10%,rgba(215,25,32,.38),transparent 60%),radial-gradient(80% 60% at 0% 100%,rgba(201,162,74,.12),transparent 60%),var(--bg)}
 .ring{position:absolute;z-index:-1;right:-30vw;top:8vh;width:110vw;max-width:900px;aspect-ratio:1;opacity:.5}
 .ring line{stroke:#2a2a2f;stroke-width:2}.ring line.r{stroke:var(--red);stroke-width:3}
-.hero h1{font-size:clamp(52px,15vw,148px)}
+.hero h1{font-size:clamp(40px,13vw,148px);overflow-wrap:anywhere}
 .hero h1 em{font-style:normal;color:var(--red);display:block}
 .hero p.lead{max-width:540px;margin:22px 0 28px;color:#d6d2ca;font-size:clamp(17px,2.2vw,20px)}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
@@ -48,7 +49,7 @@ header.solid{background:rgba(11,11,12,.82);backdrop-filter:blur(14px);-webkit-ba
 .ticker div{display:inline-block;padding:14px 0;animation:tick 28s linear infinite;font:900 15px "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
 .ticker i{font-style:normal;opacity:.55;margin:0 18px}
 @keyframes tick{to{transform:translateX(-50%)}}
-section{padding:88px 0}
+section{padding:88px 0;scroll-margin-top:64px}
 .h2{font-size:clamp(38px,8vw,76px);margin:12px 0 18px}
 .sub{color:var(--mute);max-width:620px}
 /* legacy */
@@ -115,7 +116,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-betw
 .dock.show{transform:none}
 .dock .btn{flex:1;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .dock .btn.ghost{flex:0 0 auto;background:rgba(20,20,22,.92);backdrop-filter:blur(10px)}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .navlinks{display:none;gap:26px;font-size:14px;font-weight:600}
 .navlinks a{text-decoration:none;color:#cfcbc3}.navlinks a:hover{color:#fff}
@@ -206,8 +207,8 @@ footer .row{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-betw
  <div class="reveal"><div class="kicker">Jugend &amp; Events</div><h2 class="display h2">Wir geben Talenten ihren ersten Kampf.</h2>
  <p class="sub">Der Challenge Club ist nicht nur Trainingsort, sondern auch Veranstalter. Talentierte Kinder und Jugendliche sammeln bei uns ihre ersten Kampferfahrungen – und unsere Boxer stehen auf den großen Bühnen.</p></div>
  <div class="events">
-  <div class="ev reveal"><div class="d"><b>14</b><span>Nov 26</span></div><div><h4>German Boxing Series 4</h4><p>XPOST Köln Arena – Challenge-Club-Boxer am Start.</p></div></div>
-  <div class="ev reveal"><div class="d"><b>21</b><span>Mär 26</span></div><div><h4>Kinder &amp; Jugend Box-Gala</h4><p>Die eigene Gala des Clubs – erste Kämpfe, große Bühne.</p></div></div>
+  <div class="ev reveal"><div class="d"><b>14</b><span>Nov 26</span></div><div><h4>German Boxing Series 4 · demnächst</h4><p>XPOST Köln Arena – Challenge-Club-Boxer am Start.</p></div></div>
+  <div class="ev reveal"><div class="d"><b>21</b><span>Mär 26</span></div><div><h4>Kinder &amp; Jugend Box-Gala · Rückblick</h4><p>Die eigene Gala des Clubs – erste Kämpfe, große Bühne.</p></div></div>
  </div>
 </div></section>
 
@@ -252,8 +253,8 @@ footer .row{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-betw
 <script>
 const hdr=document.getElementById('hdr'),dock=document.getElementById('dock');
 addEventListener('scroll',()=>{const y=scrollY;hdr.classList.toggle('solid',y>30);dock.classList.toggle('show',y>innerHeight*.6)},{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const rv=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)||/static/.test(location.search)){rv.forEach(el=>el.classList.add('in'))}else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});rv.forEach(el=>io.observe(el))}
 // round timer
 const C=2*Math.PI*52,arc=document.getElementById('arc'),tm=document.getElementById('tm'),ph=document.getElementById('ph'),clock=document.getElementById('clock'),go=document.getElementById('go');
 arc.style.strokeDasharray=C;let work=180,rest=60,left=work,phase='work',round=1,iv=null,ac=null;
