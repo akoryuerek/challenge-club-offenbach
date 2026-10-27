@@ -49,6 +49,7 @@ a{color:inherit}
 .hero{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:110px 0 44px;isolation:isolate}
 .sky{position:absolute;inset:0;z-index:-4;background:linear-gradient(180deg,#07060a 0%,var(--sun4) 30%,var(--sun3) 52%,var(--sun2) 62%,#1a0612 63%,#07060a 100%)}
 .sun{position:absolute;z-index:-3;left:50%;top:22%;width:min(78vw,520px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:linear-gradient(180deg,var(--sun1),var(--sun2) 55%,var(--sun3));-webkit-mask:repeating-linear-gradient(180deg,#000 0 14px,transparent 14px 18px);mask:repeating-linear-gradient(180deg,#000 0 62%,transparent 62% 64%,#000 64% 70%,transparent 70% 73%,#000 73% 78%,transparent 78% 82%,#000 82% 86%,transparent 86% 91%,#000 91% 94%,transparent 94%);filter:drop-shadow(0 0 40px rgba(255,77,46,.6))}
+.herophoto{position:absolute;inset:0;z-index:-3;background:url(assets/of-ring.jpg) center 60%/cover;opacity:.28;mix-blend-mode:luminosity;filter:contrast(1.2);-webkit-mask:linear-gradient(transparent 35%,#000 70%);mask:linear-gradient(transparent 35%,#000 70%)}
 .grid{position:absolute;z-index:-2;left:-50%;right:-50%;bottom:0;height:42%;background:linear-gradient(transparent 0 0),repeating-linear-gradient(90deg,rgba(255,60,90,.55) 0 2px,transparent 2px 60px),repeating-linear-gradient(0deg,rgba(255,60,90,.55) 0 2px,transparent 2px 46px);transform:perspective(320px) rotateX(62deg);transform-origin:bottom;animation:grid 2.4s linear infinite;-webkit-mask:linear-gradient(transparent,#000 40%);mask:linear-gradient(transparent,#000 40%)}
 @keyframes grid{to{background-position:0 0,0 0,0 46px}}
 .bigkanji{position:absolute;z-index:-1;right:-4vw;top:12%;font-size:clamp(150px,44vw,420px);line-height:.85;color:rgba(200,19,12,.85);writing-mode:vertical-rl;text-shadow:0 0 40px rgba(0,0,0,.6);opacity:.9}
@@ -180,7 +181,7 @@ footer a{color:#ddd}
 
 <main id="top">
 <section class="hero">
- <div class="sky"></div><div class="sun"></div><div class="grid"></div>
+ <div class="sky"></div><div class="herophoto" aria-hidden="true"></div><div class="sun"></div><div class="grid"></div>
  <div class="bigkanji kanji" aria-hidden="true">挑戦</div>
  <div class="wrap">
   <div class="pres">Deniz Akarsu präsentiert</div>
@@ -216,7 +217,7 @@ footer a{color:#ddd}
  <div class="cards">
   <article class="tc feat reveal"><span class="rk">#1</span><div class="ph"><div class="nosig"><div>DENIZ × MIKE TYSON<small>▶ TAPE WIRD EINGELEGT …</small></div></div></div><div class="tx"><b>Mike Tyson</b><span>Iron Mike · Foto folgt</span></div></article>
   <article class="tc feat reveal"><span class="rk">#2</span><div class="ph"><div class="nosig"><div>DIE GÜRTEL<small>▶ TROPHÄENSCHRANK</small></div></div></div><div class="tx"><b>Deniz' Titel</b><span>Europameister · Foto folgt</span></div></article>
-  <article class="tc feat reveal"><div class="ph"><img src="assets/champs.jpg" alt="Michael Seitz und Evgenios Lazaridis" loading="lazy"></div><div class="tx"><b>Seitz &amp; Lazaridis</b><span>Profiboxer</span></div></article>
+  <article class="tc feat reveal"><div class="ph"><img src="assets/of-nachwuchs.jpg" alt="Pratzentraining mit dem Nachwuchs" loading="lazy" style="object-position:60% 40%"></div><div class="tx"><b>Die nächste Generation</b><span>Made in Offenbach</span></div></article>
  </div>
  <div class="names reveal"><span>Steve Cunningham · Ex-Weltmeister</span><span>Troy Ross</span><span>Ünsal Arik · IBF Intl. Champion</span><span>Kevin Kiy</span><span>Michael Seitz</span><span>Evgenios Lazaridis</span></div>
 </div></section>
@@ -236,13 +237,14 @@ footer a{color:#ddd}
 <section id="halle" style="padding-top:20px"><div class="wrap">
  <div class="hd reveal"><div class="kick">Der Dojo</div><h2 class="anton">Die Halle</h2></div>
  <div class="gal">
-  <div class="vhsframe wide reveal"><span class="lbl">CAM 1 · RING</span><img src="assets/ring.jpg" alt="Boxring" loading="lazy"></div>
-  <div class="vhsframe reveal"><span class="lbl">CAM 2</span><img src="assets/bags.jpg" alt="Sandsäcke" loading="lazy"></div>
-  <div class="vhsframe reveal"><span class="lbl">CAM 3</span><img src="assets/gloves.jpg" alt="Boxhandschuhe" loading="lazy"></div>
-  <div class="vhsframe reveal"><span class="lbl">CAM 4</span><img src="assets/bag.jpg" alt="Sandsack" loading="lazy"></div>
-  <div class="vhsframe reveal"><span class="lbl">CAM 5</span><img src="assets/ring3.jpg" alt="Ring" loading="lazy"></div>
+  <div class="vhsframe wide reveal"><span class="lbl">CAM 1 · RING</span><img src="assets/of-sparring.jpg" alt="Sparring im Ring, Challenge Club Offenbach" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 2</span><img src="assets/of-halle.jpg" alt="Training auf der Matte" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 3</span><img src="assets/of-pratzen.jpg" alt="Pratzentraining" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 4</span><img src="assets/of-partner.jpg" alt="Partnertraining mit Medizinball" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 5</span><img src="assets/of-fitness.jpg" alt="Fitnessbereich" loading="lazy"></div>
+  <div class="vhsframe wide reveal"><span class="lbl">CAM 6 · THEKE</span><img src="assets/of-theke.jpg" alt="Club-Theke" loading="lazy"></div>
  </div>
- <p class="credit">ARCHIV: CHALLENGE CLUB® STAMMHAUS SACHSENHAUSEN</p>
+ <p class="credit">LIVE AUS DER HALLE: SCHREBERSTR. 6 · OFFENBACH</p>
 </div></section>
 
 <section id="rundenuhr" class="timer"><div class="wrap">
@@ -266,7 +268,7 @@ footer a{color:#ddd}
  </div>
  <div class="info">
   <div class="box reveal"><h4>Austragungsort</h4><p style="font-size:20px;line-height:1.35">Challenge Club® Offenbach<br>Schreberstraße 6<br>63069 Offenbach am Main</p><p style="margin-top:16px"><a class="btn sm" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" target="_blank" rel="noopener">Route planen</a></p></div>
-  <div class="box reveal"><h4>Öffnungszeiten</h4><div class="row"><span>Montag – Freitag</span><b>14:00 – 22:00</b></div><div class="row"><span>Wochenende</span><b>auf Anfrage</b></div><div class="row"><span>Instagram</span><b><a href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">@challengeclub_offenbach</a></b></div></div>
+  <div class="box reveal"><h4>Öffnungszeiten</h4><div class="row"><span>Montag – Freitag</span><b>14:00 – 22:00</b></div><div class="row"><span>Samstag &amp; Sonntag</span><b>13:00 – 17:00</b></div><div class="row"><span>Instagram</span><b><a href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">@challengeclub_offenbach</a></b></div></div>
  </div>
 </div></section>
 </main>
