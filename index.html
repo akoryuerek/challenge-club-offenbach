@@ -2,268 +2,297 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Challenge Club Offenbach · Boxen mit Herz</title>
-<meta name="description" content="Challenge Club Offenbach – Boxen, Thai- & Kickboxen, Frauen Fitness Boxen, Jugendboxen und Fitness. Schreberstraße 6, 63069 Offenbach.">
+<title>CHALLENGE CLUB® Offenbach · 挑戦</title>
+<meta name="description" content="Challenge Club Offenbach – Boxen, Thai- & Kickboxen, Frauen Fitness Boxen, Jugend. Udo Schmidt. Seit 2010. Schreberstraße 6, Offenbach.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0b0b0c">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23d71920'/><text x='50' y='68' font-size='54' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' fill='white'>C</text></svg>">
+<meta name="theme-color" content="#07060a">
+<link rel="icon" href="assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=VT323&family=Noto+Serif+JP:wght@900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b0c;--bg2:#141416;--ink:#f4f1ea;--mute:#a19d95;--red:#d71920;--red2:#ff3b30;--gold:#c9a24a;--line:#26262a;--r:14px}
+:root{--bk:#07060a;--bk2:#110d12;--blood:#c8130c;--brand:#8b1602;--gold:#f3b53a;--sun1:#ffcc33;--sun2:#ff4d2e;--sun3:#c2185b;--sun4:#3b0a45;--ink:#f6efe6;--mute:#a59a96}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
+body{background:var(--bk);color:var(--ink);font:500 17px/1.55 "Barlow Condensed","Arial Narrow",Arial,sans-serif;letter-spacing:.01em;overflow-x:hidden}
 a{color:inherit}
-.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
-.display{font-family:"Arial Black","Helvetica Neue",Impact,Arial,sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92;text-transform:uppercase}
-.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--red2);font-weight:700}
-/* header */
-header{position:fixed;inset:0 0 auto;z-index:50;padding:calc(env(safe-area-inset-top) + 12px) 0 12px;transition:background .3s,backdrop-filter .3s}
-header.solid{background:rgba(11,11,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo b{display:grid;place-items:center;width:38px;height:38px;border-radius:9px;background:var(--red);font:900 20px "Arial Black",Arial;color:#fff}
-.logo span{font:900 14px/1 "Arial Black",Arial;letter-spacing:.06em;text-transform:uppercase}
-.logo small{display:block;font:600 10px/1.4 -apple-system,Arial;letter-spacing:.3em;color:var(--mute)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--red);color:#fff;font-weight:800;text-decoration:none;letter-spacing:.02em;border:0;cursor:pointer;transition:transform .15s,background .2s;font-size:16px}
-.btn:hover{background:var(--red2)}.btn:active{transform:scale(.97)}
-.btn.ghost{background:transparent;border:1.5px solid #3a3a40}
-.btn.sm{min-height:40px;padding:0 16px;font-size:14px}
+.wrap{width:min(1100px,100% - 32px);margin-inline:auto}
+.anton{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.01em}
+.brush{font-family:"Permanent Marker",cursive}
+.osd{font-family:VT323,ui-monospace,monospace;letter-spacing:.06em}
+.kanji{font-family:"Noto Serif JP",serif;font-weight:900}
+.chrome{background:linear-gradient(180deg,#fff 0%,#dfe6f0 38%,#7a8496 49%,#1d2433 51%,#5d6b85 64%,#e9eef6 86%,#fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.25);filter:drop-shadow(0 3px 0 var(--blood)) drop-shadow(0 8px 18px rgba(200,19,12,.45))}
+.kick{font:700 13px "Barlow Condensed",sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+/* VHS overlay */
+.vhs{position:fixed;inset:0;pointer-events:none;z-index:200;background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+.vhs::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 60%,rgba(0,0,0,.55) 100%)}
+.track{position:fixed;left:0;right:0;height:26px;top:-30px;z-index:201;pointer-events:none;background:linear-gradient(transparent,rgba(255,255,255,.07),transparent);animation:track 9s linear infinite}
+@keyframes track{0%,70%{top:-30px}100%{top:105%}}
+.osdbar{position:fixed;z-index:202;pointer-events:none;color:#fff;text-shadow:0 0 4px rgba(255,255,255,.6),2px 0 rgba(255,0,60,.5),-2px 0 rgba(0,200,255,.4);font-size:22px}
+.osd-tl{top:calc(env(safe-area-inset-top) + 58px);left:14px}
+.osd-tr{top:calc(env(safe-area-inset-top) + 58px);right:14px}
+.osd-bl{bottom:calc(env(safe-area-inset-bottom) + 82px);left:14px;font-size:19px}
+.blink{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+/* nav */
+.top{position:fixed;inset:0 0 auto;z-index:150;padding:calc(env(safe-area-inset-top) + 8px) 0 8px;background:linear-gradient(rgba(7,6,10,.92),rgba(7,6,10,.75));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(200,19,12,.35)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:36px;height:36px;display:block}
+.brand span{font:400 17px/1 Anton,Impact,sans-serif;letter-spacing:.06em}
+.brand small{display:block;font:700 10px "Barlow Condensed",sans-serif;letter-spacing:.34em;color:var(--gold);margin-top:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;background:linear-gradient(180deg,#e3261c,#9f0d07);color:#fff;border:1px solid #ff6a55;border-radius:3px;font:400 18px Anton,Impact,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 0 0 2px #000,0 0 24px rgba(200,19,12,.55),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .12s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn.sm{min-height:40px;padding:0 14px;font-size:14px}
+.btn.gold{background:linear-gradient(180deg,#ffd77a,#c98a12);color:#1a0d00;border-color:#ffe2a0;box-shadow:0 0 0 2px #000,0 0 22px rgba(243,181,58,.4),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn.ghost{background:transparent;border-color:#555;box-shadow:none}
 /* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 56px;isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 70% at 80% 10%,rgba(215,25,32,.38),transparent 60%),radial-gradient(80% 60% at 0% 100%,rgba(201,162,74,.12),transparent 60%),var(--bg)}
-.ring{position:absolute;z-index:-1;right:-30vw;top:8vh;width:110vw;max-width:900px;aspect-ratio:1;opacity:.5}
-.ring line{stroke:#2a2a2f;stroke-width:2}.ring line.r{stroke:var(--red);stroke-width:3}
-.hero h1{font-size:clamp(40px,13vw,148px);overflow-wrap:anywhere}
-.hero h1 em{font-style:normal;color:var(--red);display:block}
-.hero p.lead{max-width:540px;margin:22px 0 28px;color:#d6d2ca;font-size:clamp(17px,2.2vw,20px)}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
-.hero .meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px;color:var(--mute);font-size:14px}
-.hero .meta span::before{content:"●";color:var(--red);margin-right:8px;font-size:9px;vertical-align:2px}
-.word{display:inline-block;opacity:0;transform:translateY(40px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
-.word:nth-child(2){animation-delay:.12s}.word:nth-child(3){animation-delay:.24s}
-@keyframes up{to{opacity:1;transform:none}}
-/* ticker */
-.ticker{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;border-block:1px solid #ff4b45}
-.ticker div{display:inline-block;padding:14px 0;animation:tick 28s linear infinite;font:900 15px "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
-.ticker i{font-style:normal;opacity:.55;margin:0 18px}
-@keyframes tick{to{transform:translateX(-50%)}}
-section{padding:88px 0;scroll-margin-top:64px}
-.h2{font-size:clamp(38px,8vw,76px);margin:12px 0 18px}
-.sub{color:var(--mute);max-width:620px}
-/* legacy */
-.legacy{display:grid;gap:28px}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
-.stat{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px}
-.stat b{display:block;font:900 clamp(34px,7vw,52px)/1 "Arial Black",Arial;color:var(--ink)}
-.stat b sup{color:var(--red);font-size:.5em}
-.stat span{color:var(--mute);font-size:14px}
-.quote{border-left:4px solid var(--red);padding:6px 0 6px 20px;font-size:clamp(20px,3.4vw,28px);font-weight:700;line-height:1.3}
-.quote small{display:block;margin-top:10px;font-size:13px;font-weight:500;color:var(--mute);letter-spacing:.06em}
-/* programs */
-.cards{display:grid;gap:14px;margin-top:36px}
-.card{position:relative;background:linear-gradient(180deg,#17171a,#111113);border:1px solid var(--line);border-radius:18px;padding:26px 22px 24px;overflow:hidden;transition:transform .25s,border-color .25s}
-.card:hover{transform:translateY(-4px);border-color:#44262a}
-.card .n{position:absolute;right:16px;top:8px;font:900 64px/1 "Arial Black",Arial;color:#1f1f23}
-.card h3{font:900 22px/1.1 "Arial Black",Arial;text-transform:uppercase;margin:6px 0 10px;position:relative}
-.card p{color:#bcb8b0;font-size:15.5px;position:relative}
-.card .tag{display:inline-block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:110px 0 44px;isolation:isolate}
+.sky{position:absolute;inset:0;z-index:-4;background:linear-gradient(180deg,#07060a 0%,var(--sun4) 30%,var(--sun3) 52%,var(--sun2) 62%,#1a0612 63%,#07060a 100%)}
+.sun{position:absolute;z-index:-3;left:50%;top:22%;width:min(78vw,520px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:linear-gradient(180deg,var(--sun1),var(--sun2) 55%,var(--sun3));-webkit-mask:repeating-linear-gradient(180deg,#000 0 14px,transparent 14px 18px);mask:repeating-linear-gradient(180deg,#000 0 62%,transparent 62% 64%,#000 64% 70%,transparent 70% 73%,#000 73% 78%,transparent 78% 82%,#000 82% 86%,transparent 86% 91%,#000 91% 94%,transparent 94%);filter:drop-shadow(0 0 40px rgba(255,77,46,.6))}
+.grid{position:absolute;z-index:-2;left:-50%;right:-50%;bottom:0;height:42%;background:linear-gradient(transparent 0 0),repeating-linear-gradient(90deg,rgba(255,60,90,.55) 0 2px,transparent 2px 60px),repeating-linear-gradient(0deg,rgba(255,60,90,.55) 0 2px,transparent 2px 46px);transform:perspective(320px) rotateX(62deg);transform-origin:bottom;animation:grid 2.4s linear infinite;-webkit-mask:linear-gradient(transparent,#000 40%);mask:linear-gradient(transparent,#000 40%)}
+@keyframes grid{to{background-position:0 0,0 0,0 46px}}
+.bigkanji{position:absolute;z-index:-1;right:-4vw;top:12%;font-size:clamp(150px,44vw,420px);line-height:.85;color:rgba(200,19,12,.85);writing-mode:vertical-rl;text-shadow:0 0 40px rgba(0,0,0,.6);opacity:.9}
+.heroudo{position:absolute;z-index:-1;left:-8%;bottom:16%;width:min(58vw,360px);aspect-ratio:740/1030;-webkit-mask:radial-gradient(ellipse 60% 55% at 50% 38%,#000 35%,transparent 72%);mask:radial-gradient(ellipse 60% 55% at 50% 38%,#000 35%,transparent 72%);opacity:.6}
+.heroudo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;filter:grayscale(1) contrast(1.3) brightness(.9) sepia(1) hue-rotate(-30deg) saturate(3)}
+.pres{font:700 14px "Barlow Condensed",sans-serif;letter-spacing:.38em;text-transform:uppercase;color:#ffd9c9}
+.title{font-size:clamp(72px,21vw,190px);margin:8px 0 0}
+.title span{display:block}
+.city{font-size:clamp(44px,13vw,110px);color:var(--gold);transform:rotate(-4deg);margin:-6px 0 10px 4px;text-shadow:0 0 18px rgba(243,181,58,.55),3px 3px 0 #000}
+.tag{font-size:clamp(19px,4.6vw,24px);max-width:520px;color:#ffe9de;text-shadow:0 2px 8px #000}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.billing{margin-top:30px;border-top:1px solid rgba(255,255,255,.25);padding-top:12px;font:500 12.5px/1.45 "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8cbc6;text-align:center}
+.billing b{color:#fff}
+/* sections */
+section{position:relative;padding:84px 0;scroll-margin-top:60px}
+.hd{margin-bottom:30px}
+.hd h2{font-size:clamp(46px,13vw,104px);margin-top:8px}
+.hd p{max-width:640px;color:#cfc3be;margin-top:12px;font-size:18px}
+.hd .k2{font-size:22px;color:var(--blood);margin-left:10px}
+/* champion */
+.champ{display:grid;gap:28px;align-items:center}
+.vhsframe{position:relative;border:3px solid #000;box-shadow:0 0 0 2px var(--blood),0 20px 60px rgba(200,19,12,.35);overflow:hidden;background:#000}
+.vhsframe img{display:block;width:100%;height:100%;object-fit:cover;filter:contrast(1.12) saturate(1.15)}
+.vhsframe::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+.vhsframe .lbl{position:absolute;left:10px;top:8px;z-index:2;font:22px VT323,monospace;color:#fff;text-shadow:0 0 4px #fff}
+.vhsframe .lbl2{position:absolute;right:10px;bottom:8px;z-index:2;font:20px VT323,monospace;color:#fff;text-shadow:0 0 4px #fff}
+.duo2{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+.duo2 .vhsframe:nth-child(1){aspect-ratio:740/1030}
+.duo2 .vhsframe:nth-child(2){aspect-ratio:480/640;margin-top:40px}
+.credits{list-style:none;margin-top:22px;border-top:1px solid #2a2226}
+.credits li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #2a2226}
+.credits li span{font:700 13px "Barlow Condensed",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.credits li b{font:400 19px Anton,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;text-align:right}
+.quote{margin-top:22px;font-size:clamp(22px,5.4vw,30px);line-height:1.25;color:#fff;border-left:4px solid var(--blood);padding-left:16px}
+.quote small{display:block;margin-top:8px;font:700 12px "Barlow Condensed",sans-serif;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+/* hall of fame */
+.hof{background:radial-gradient(80% 60% at 50% 0%,rgba(200,19,12,.22),transparent 70%),var(--bk2);border-block:1px solid #2a1418}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tc{position:relative;background:linear-gradient(160deg,#2a0d0c,#0f0a0d 60%);border:2px solid #000;outline:1px solid #6b1a12;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+.tc .ph{aspect-ratio:3/4;background:#120c0e;position:relative;overflow:hidden}
+.tc .ph img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.1) saturate(1.1)}
+.tc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.85));}
+.tc .tx{position:absolute;left:0;right:0;bottom:0;padding:10px 10px 12px;z-index:2}
+.tc .tx b{display:block;font:400 clamp(17px,4.8vw,24px)/1 Anton,Impact,sans-serif;text-transform:uppercase}
+.tc .tx span{display:block;margin-top:4px;font:700 11px "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.tc .rk{position:absolute;top:8px;left:8px;z-index:2;font:400 14px Anton,sans-serif;background:var(--blood);padding:3px 8px;border-radius:3px;letter-spacing:.08em}
+.nosig{position:absolute;inset:0;display:grid;place-content:center;text-align:center;background:repeating-linear-gradient(90deg,#c0c0c0 0 12.5%,#c0c000 12.5% 25%,#00c0c0 25% 37.5%,#00c000 37.5% 50%,#c000c0 50% 62.5%,#c00000 62.5% 75%,#0000c0 75% 87.5%,#111 87.5%);}
+.nosig::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.nosig div{position:relative;font:26px/1 VT323,monospace;color:#fff;text-shadow:0 0 6px #fff;padding:0 8px}
+.nosig small{display:block;font-size:17px;margin-top:6px;color:#ffd}
+.tc.feat{grid-column:span 2}
+.tc.feat .ph{aspect-ratio:16/10}
+.names{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
+.names span{font:400 15px Anton,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1px solid #4a2a2a;padding:7px 12px;border-radius:999px;background:#140b0d}
+/* tournament */
+.bracket{display:grid;gap:12px}
+.bout{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:14px;background:linear-gradient(90deg,#1a0c0e,#0d0a0c);border:1px solid #2b1a1c;border-left:4px solid var(--blood);padding:16px 16px 16px 12px;border-radius:4px;position:relative;overflow:hidden}
+.bout .r{font:400 15px/1 Anton,sans-serif;color:var(--gold);text-align:center;letter-spacing:.06em}
+.bout .r b{display:block;font-size:40px;color:#fff}
+.bout h3{font:400 clamp(24px,6.6vw,32px)/1 Anton,Impact,sans-serif;text-transform:uppercase}
+.bout p{color:#c4b8b4;font-size:16px;margin-top:4px}
+.bout .kj{position:absolute;right:10px;bottom:-14px;font:900 72px/1 "Noto Serif JP",serif;color:rgba(200,19,12,.14)}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gal .vhsframe{aspect-ratio:3/2;box-shadow:0 0 0 1px #3a1a16}
+.gal .vhsframe img{filter:contrast(1.25) saturate(.6) sepia(.25) hue-rotate(-12deg)}
+.gal .wide{grid-column:span 2;aspect-ratio:16/9}
+.credit{font:18px VT323,monospace;color:var(--mute);margin-top:14px}
 /* timer */
-.timer{background:var(--bg2);border-block:1px solid var(--line)}
-.tbox{display:grid;gap:26px;align-items:center}
-.clock{position:relative;width:min(320px,80vw);aspect-ratio:1;margin-inline:auto}
-.clock svg{width:100%;height:100%;transform:rotate(-90deg)}
-.clock circle{fill:none;stroke-width:10}
-.clock .bgc{stroke:#25252a}.clock .fg{stroke:var(--red);stroke-linecap:round;transition:stroke-dashoffset .25s linear,stroke .3s}
-.clock.rest .fg{stroke:var(--gold)}
-.clock .lbl{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
-.clock .t{font:900 clamp(54px,15vw,76px)/1 "Arial Black",Arial;font-variant-numeric:tabular-nums}
-.clock .ph{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-top:8px}
-.tctl{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.seg{display:flex;gap:6px;justify-content:center;margin-bottom:14px}
-.seg button{background:#1d1d21;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:700;font-size:14px;cursor:pointer}
-.seg button.on{background:var(--ink);color:#111}
-/* youth */
-.youth{position:relative;overflow:hidden}
-.youth .big{position:absolute;right:-4vw;bottom:-3vw;font:900 clamp(120px,30vw,320px)/.8 "Arial Black",Arial;color:#131315;z-index:-1;user-select:none}
-.events{display:grid;gap:12px;margin-top:30px}
-.ev{display:flex;gap:16px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-.ev .d{flex:none;width:62px;text-align:center;border-right:1px solid var(--line);padding-right:14px}
-.ev .d b{display:block;font:900 26px/1 "Arial Black",Arial;color:var(--red2)}
-.ev .d span{font-size:11px;letter-spacing:.15em;color:var(--mute);text-transform:uppercase}
-.ev h4{font-size:16px}.ev p{font-size:14px;color:var(--mute)}
-/* values */
-.values{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:34px}
-.values div{background:var(--bg);padding:30px 18px;text-align:center}
-.values b{display:block;font:900 clamp(20px,4.6vw,30px)/1 "Arial Black",Arial;text-transform:uppercase}
-.values span{font-size:13px;color:var(--mute)}
-/* steps */
-.steps{display:grid;gap:14px;margin:36px 0 30px;counter-reset:s}
-.step{display:flex;gap:16px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
-.step::before{counter-increment:s;content:counter(s);flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--red);font:900 18px "Arial Black",Arial}
-.step h4{font-size:17px;margin-bottom:2px}.step p{color:var(--mute);font-size:15px}
-/* location */
-.loc{display:grid;gap:14px}
-.panel{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px 22px}
-.panel h3{font:900 20px "Arial Black",Arial;text-transform:uppercase;margin-bottom:12px}
-.hours div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed #2c2c31;font-size:15.5px}
-.hours div:last-child{border:0}
-footer{padding:40px 0 calc(110px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--mute);font-size:13.5px}
-footer .row{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
-/* sticky mobile CTA */
-.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:flex;gap:10px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.dock.show{transform:none}
-.dock .btn{flex:1;box-shadow:0 10px 30px rgba(0,0,0,.5)}
-.dock .btn.ghost{flex:0 0 auto;background:rgba(20,20,22,.92);backdrop-filter:blur(10px)}
-.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.timer{text-align:center;background:linear-gradient(180deg,var(--bk),#16050a 50%,var(--bk))}
+.deck{max-width:540px;margin-inline:auto;background:linear-gradient(180deg,#26262c,#0e0e12);border:2px solid #000;border-radius:14px;padding:18px 16px 22px;box-shadow:0 0 0 1px #3c3c44,0 20px 60px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.12)}
+.lcd{background:#120304;border:2px solid #000;border-radius:8px;padding:14px 10px;box-shadow:inset 0 0 30px rgba(0,0,0,.9)}
+.lcd .tm{font:400 clamp(92px,30vw,150px)/.9 VT323,monospace;color:#ff2a1a;text-shadow:0 0 12px rgba(255,42,26,.85),0 0 30px rgba(255,42,26,.45);font-variant-numeric:tabular-nums}
+.lcd .st{font:24px VT323,monospace;color:#ff8a7a;letter-spacing:.12em}
+.rest .lcd .tm{color:var(--gold);text-shadow:0 0 12px rgba(243,181,58,.8)}
+.seg{display:flex;gap:8px;justify-content:center;margin:16px 0}
+.seg button{font:22px VT323,monospace;padding:6px 14px;background:#1b1b20;color:#ddd;border:1px solid #3b3b44;border-radius:4px;cursor:pointer;box-shadow:inset 0 -3px 0 #000}
+.seg button.on{background:#ff2a1a;color:#000;border-color:#ff6a55}
+.keys{display:flex;gap:10px;justify-content:center}
+/* invitation */
+.inv{position:relative;max-width:720px;margin-inline:auto;background:linear-gradient(180deg,#1a0a06,#0b0605);border:2px solid var(--gold);outline:1px solid var(--gold);outline-offset:6px;padding:34px 22px 30px;text-align:center;box-shadow:0 0 60px rgba(243,181,58,.18)}
+.inv .seal{position:absolute;right:-6px;top:-22px;width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e3261c,#7a0b05);display:grid;place-content:center;box-shadow:0 6px 16px rgba(0,0,0,.6),inset 0 0 0 3px rgba(0,0,0,.25);transform:rotate(8deg)}
+.inv .seal span{font:900 34px/1 "Noto Serif JP",serif;color:#ffd9b0}
+.inv .kanji{font-size:clamp(70px,22vw,120px);color:var(--blood);line-height:1;text-shadow:0 0 30px rgba(200,19,12,.5)}
+.inv h3{font-size:clamp(38px,11vw,72px);margin:4px 0 10px}
+.inv p{color:#e2d5c7;max-width:520px;margin:0 auto}
+.inv ul{list-style:none;margin:20px auto 24px;max-width:420px;text-align:left}
+.inv li{padding:9px 0;border-bottom:1px dashed rgba(243,181,58,.35);font-size:17px}
+.inv li::before{content:"◆ ";color:var(--gold)}
+.info{display:grid;gap:14px;margin-top:40px}
+.box{background:var(--bk2);border:1px solid #2b1a1c;border-top:3px solid var(--blood);padding:22px 18px;border-radius:4px}
+.box h4{font:400 26px Anton,Impact,sans-serif;text-transform:uppercase;margin-bottom:10px}
+.box .row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #241a1c;font-size:17px}
+.box .row:last-child{border:0}
+footer{padding:44px 0 calc(110px + env(safe-area-inset-bottom));border-top:1px solid #2b1a1c;text-align:center;color:var(--mute);font-size:14px}
+footer .plate{display:inline-block;background:#f6efe6;padding:10px 16px;border-radius:4px;margin-bottom:16px}
+footer .plate img{display:block;width:min(260px,70vw);height:auto}
+footer a{color:#ddd}
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:160;transform:translateY(170%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.dock.show{transform:none}.dock .btn{width:100%}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
-.navlinks{display:none;gap:26px;font-size:14px;font-weight:600}
-.navlinks a{text-decoration:none;color:#cfcbc3}.navlinks a:hover{color:#fff}
-@media (min-width:760px){
- .navlinks{display:flex}
- .legacy{grid-template-columns:1.1fr .9fr;align-items:center}
- .stats{grid-template-columns:repeat(2,1fr)}
- .cards{grid-template-columns:repeat(3,1fr)}
- .tbox{grid-template-columns:1fr 1fr}
- .events{grid-template-columns:1fr 1fr}
- .values{grid-template-columns:repeat(4,1fr)}
- .steps{grid-template-columns:repeat(3,1fr)}
- .loc{grid-template-columns:1.2fr .8fr}
- .dock{display:none}
- footer{padding-bottom:40px}
+.no-js .reveal{opacity:1;transform:none}
+.glitch{animation:glitch 6s infinite}
+@keyframes glitch{0%,92%,100%{transform:none;filter:none}93%{transform:translate(-3px,1px);filter:drop-shadow(3px 0 rgba(0,220,255,.7))}95%{transform:translate(3px,-1px);filter:drop-shadow(-3px 0 rgba(255,0,80,.8))}97%{transform:none}}
+@media(min-width:800px){
+ .champ{grid-template-columns:1fr 1fr}
+ .cards{grid-template-columns:repeat(4,1fr)}.tc.feat{grid-column:span 2}
+ .bracket{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:repeat(3,1fr)}.gal .wide{grid-column:span 2}
+ .info{grid-template-columns:1fr 1fr}
+ .dock,.osd-bl{display:none}footer{padding-bottom:44px}
+ .heroudo{left:2%;opacity:.7}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.word,.reveal{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
-<body>
-<header id="hdr"><div class="wrap nav">
- <a class="logo" href="#top"><b>C</b><span>Challenge Club<small>OFFENBACH</small></span></a>
- <nav class="navlinks"><a href="#club">Der Club</a><a href="#training">Training</a><a href="#rundenuhr">Rundenuhr</a><a href="#jugend">Jugend</a><a href="#standort">Standort</a></nav>
- <a class="btn sm" href="#probetraining">Probetraining</a>
+<body class="no-js">
+<script>document.body.classList.remove('no-js')</script>
+<div class="vhs" aria-hidden="true"></div><div class="track" aria-hidden="true"></div>
+<div class="osdbar osd osd-tl" aria-hidden="true">PLAY ▶</div>
+<div class="osdbar osd osd-tr" aria-hidden="true"><span class="blink">●</span> SP</div>
+
+
+<header class="top"><div class="wrap">
+ <a class="brand" href="#top"><img src="assets/logo-icon.png" alt="Challenge Club Logo"><span>CHALLENGE CLUB®<small>OFFENBACH</small></span></a>
+ <a class="btn sm" href="#einladung">Probetraining</a>
 </div></header>
 
 <main id="top">
 <section class="hero">
- <svg class="ring" viewBox="0 0 400 400" aria-hidden="true">
-  <line x1="40" y1="60" x2="360" y2="60" class="r"/><line x1="40" y1="110" x2="360" y2="110"/><line x1="40" y1="160" x2="360" y2="160"/>
-  <line x1="40" y1="40" x2="40" y2="380"/><line x1="360" y1="40" x2="360" y2="380"/>
- </svg>
+ <div class="sky"></div><div class="sun"></div><div class="grid"></div>
+ <div class="bigkanji kanji" aria-hidden="true">挑戦</div>
+ <div class="heroudo" aria-hidden="true"><img src="assets/udo.jpg" alt=""></div>
  <div class="wrap">
-  <div class="kicker">Boxen · Thai- &amp; Kickboxen · Fitness</div>
-  <h1 class="display" style="margin-top:14px"><span class="word">Mut.</span> <span class="word">Disziplin.</span> <em class="word">Stärke.</em></h1>
-  <p class="lead">Echtes Boxen – leidenschaftlich, authentisch, intensiv. Die Challenge-Club-Schule aus Sachsenhausen, jetzt in Offenbach. Für Einsteiger, Amateure und alle, die ihre Grenzen testen wollen.</p>
-  <div class="ctas"><a class="btn" href="#probetraining">Probetraining sichern →</a><a class="btn ghost" href="#training">Angebot ansehen</a></div>
-  <div class="meta"><span>Schreberstraße 6</span><span>BDB-lizenzierte Trainer</span><span>Seit 2010 im Ring</span></div>
+  <div class="pres">Udo Schmidt präsentiert</div>
+  <h1 class="anton title chrome glitch"><span>Challenge</span><span>Club</span></h1>
+  <div class="brush city">Offenbach</div>
+  <p class="tag">Nach einer wahren Geschichte. Seit 2010.<br><b>Mut. Disziplin. Stärke.</b></p>
+  <div class="ctas"><a class="btn" href="#einladung">▶ Play · Probetraining</a><a class="btn ghost" href="#legenden">Die Legenden</a></div>
+  <div class="billing">Ein <b>Challenge Club®</b> Film · mit <b>Udo Schmidt</b> · Boxen · Thai- &amp; Kickboxen · Frauen Fitness Boxen · Jugend · Fitness · BDB-lizenzierte Trainer · Schreberstraße 6 · 63069 Offenbach am Main</div>
  </div>
 </section>
 
-<div class="ticker" aria-hidden="true"><div>Boxen<i>✦</i>Thai- &amp; Kickboxen<i>✦</i>Frauen Fitness Boxen<i>✦</i>Jugend Boxen<i>✦</i>Kraft &amp; Cardio<i>✦</i>Sparring<i>✦</i>Wettkampf<i>✦</i>Boxen<i>✦</i>Thai- &amp; Kickboxen<i>✦</i>Frauen Fitness Boxen<i>✦</i>Jugend Boxen<i>✦</i>Kraft &amp; Cardio<i>✦</i>Sparring<i>✦</i>Wettkampf<i>✦</i></div></div>
-
-<section id="club"><div class="wrap legacy">
- <div class="reveal">
-  <div class="kicker">Der Club</div>
-  <h2 class="display h2">Boxclub aus Leidenschaft.</h2>
-  <p class="sub">Was 2010 in Frankfurt-Sachsenhausen mit Udo Schmidt begann, ist heute eine feste Größe der Box- und Kampfsportszene im Rhein-Main-Gebiet. Hier trainieren Anfänger neben Profis – und lernen voneinander. Keine Show, kein Schnickschnack: Technik, Kondition, mentale Stärke.</p>
-  <div class="stats">
-   <div class="stat"><b>2010</b><span>Eröffnung des ersten Challenge Club</span></div>
-   <div class="stat"><b>BDB<sup>✓</sup></b><span>Trainer mit Profi- &amp; Amateurlizenz</span></div>
-   <div class="stat"><b>5</b><span>Disziplinen unter einem Dach</span></div>
-   <div class="stat"><b>1</b><span>Team. Ohne Ausnahme.</span></div>
-  </div>
+<section id="champion"><div class="wrap champ">
+ <div class="duo2 reveal">
+  <div class="vhsframe"><span class="lbl">REC ●</span><img src="assets/udo.jpg" alt="Udo Schmidt bei der Eröffnung" loading="lazy" style="object-position:50% 18%"><span class="lbl2">CH 01</span></div>
+  <div class="vhsframe"><span class="lbl">TAPE 02</span><img src="assets/tietze.jpg" alt="Udo Schmidt mit Profiboxer Jens Tietze" loading="lazy"><span class="lbl2">2,04 M</span></div>
  </div>
  <div class="reveal">
-  <p class="quote">„Unabhängig davon, ob du ein blutiger Anfänger, ein erfahrener Amateur oder einfach nur neugierig bist – bei uns findest du dein neues sportliches Zuhause.“<small>CHALLENGE CLUB · BOXEN MIT HERZ</small></p>
-  <p class="sub" style="margin-top:22px">Profiboxer wie Michael Seitz, Evgenios Lazaridis und Kevin Kiy haben im Challenge Club ihre Runden gedreht. Dieselbe Trainingsschule gibt es in Offenbach – lichtdurchflutete Räume, moderne Geräte, familiäre Atmosphäre.</p>
+  <div class="kick">Der Champion</div>
+  <h2 class="anton hd" style="font-size:clamp(52px,14vw,104px);margin:8px 0 14px">Udo<br>Schmidt</h2>
+  <p style="color:#d8ccc7;font-size:18px">1,79 m. 84 kg. Profi- und Amateur-Trainerlizenz. Angefangen in Niederrad, groß geworden in Sachsenhausen, jetzt auch in Offenbach. Er hat einen Club gebaut mit dem besten Equipment und den besten Bedingungen – einen Ort, an dem Weltmeister trainieren und blutige Anfänger ihre ersten Runden drehen.</p>
+  <ul class="credits">
+   <li><span>Gründer</span><b>Udo Schmidt</b></li>
+   <li><span>Seit</span><b>Januar 2010</b></li>
+   <li><span>Lizenz</span><b>Profi &amp; Amateur</b></li>
+   <li><span>Verband</span><b>Bund Dt. Berufsboxer</b></li>
+  </ul>
+  <p class="quote">„Wenn ein Sportler sagt, die Bedingungen sind optimal – dann ist das eine Bestätigung.“<small>Udo Schmidt · Frankfurter Neue Presse</small></p>
  </div>
 </div></section>
 
-<section id="training" style="padding-top:0"><div class="wrap">
- <div class="reveal"><div class="kicker">Training</div><h2 class="display h2">Wähle deinen Kampf.</h2>
- <p class="sub">Anfänger und Fortgeschrittene trainieren gemeinsam. Unsere Trainer begleiten dich vom ersten Bandagieren bis zum Sparring – und wenn du willst, bis in den Wettkampf.</p></div>
+<section id="legenden" class="hof"><div class="wrap">
+ <div class="hd reveal"><div class="kick">Hall of Fame</div><h2 class="anton chrome">Die Legenden<span class="kanji k2">伝説</span></h2><p>Weltmeister, Profis, Titelkämpfer. Sie alle standen schon bei Udo in der Halle.</p></div>
  <div class="cards">
-  <article class="card reveal"><span class="n">01</span><span class="tag">Klassisch</span><h3>Boxen</h3><p>Stand, Deckung, Beinarbeit, Kombinationen. Das Handwerk – sauber aufgebaut, vom Techniktraining bis zum Sparring.</p></article>
-  <article class="card reveal"><span class="n">02</span><span class="tag">Stand-up</span><h3>Thai- &amp; Kickboxen</h3><p>Fäuste, Tritte, Knie. Explosiv, vielseitig und eine Konditionsschule, die dich über dich hinauswachsen lässt.</p></article>
-  <article class="card reveal"><span class="n">03</span><span class="tag">Nur für Frauen</span><h3>Frauen Fitness Boxen</h3><p>Kondition, Schnelligkeit, Konzentration und Technik – in einem Kurs, der für Frauen entwickelt wurde.</p></article>
-  <article class="card reveal"><span class="n">04</span><span class="tag">12–17 Jahre</span><h3>Jugend Boxen</h3><p>Fitness und Mentalität für Jugendliche. Respekt, Fokus und Selbstvertrauen, die auch außerhalb der Halle bleiben.</p></article>
-  <article class="card reveal"><span class="n">05</span><span class="tag">Open Gym</span><h3>Kraft &amp; Cardio</h3><p>Freie Gewichte, Kraftstationen, Cardio-Geräte. Ergänzend zum Kampfsport, während der Öffnungszeiten frei nutzbar.</p></article>
-  <article class="card reveal"><span class="n">06</span><span class="tag">1:1</span><h3>Personaltraining</h3><p>Privatstunden mit lizenzierten Trainern – für schnellere Fortschritte oder die gezielte Vorbereitung auf deinen Kampf.</p></article>
+  <article class="tc feat reveal"><span class="rk">#1</span><div class="ph"><div class="nosig"><div>UDO × MIKE TYSON<small>▶ TAPE WIRD EINGELEGT …</small></div></div></div><div class="tx"><b>Mike Tyson</b><span>Iron Mike · Foto folgt</span></div></article>
+  <article class="tc feat reveal"><span class="rk">#2</span><div class="ph"><div class="nosig"><div>DIE GÜRTEL<small>▶ TROPHÄENSCHRANK</small></div></div></div><div class="tx"><b>Udos Titel</b><span>Gürtel &amp; Trophäen · Foto folgt</span></div></article>
+  <article class="tc reveal"><div class="ph"><img src="assets/champs.jpg" alt="Michael Seitz und Evgenios Lazaridis" loading="lazy"></div><div class="tx"><b>Seitz &amp; Lazaridis</b><span>Profiboxer</span></div></article>
+  <article class="tc reveal"><div class="ph"><img src="assets/tietze.jpg" alt="Jens Tietze mit Udo Schmidt" loading="lazy" style="object-position:70% 30%"></div><div class="tx"><b>Jens Tietze</b><span>Profi-Schwergewicht</span></div></article>
+ </div>
+ <div class="names reveal"><span>Steve Cunningham · Ex-Weltmeister</span><span>Troy Ross</span><span>Ünsal Arik · IBF Intl. Champion</span><span>Kevin Kiy</span><span>Michael Seitz</span><span>Evgenios Lazaridis</span><span>Jens Tietze</span></div>
+</div></section>
+
+<section id="turnier"><div class="wrap">
+ <div class="hd reveal"><div class="kick">Das Turnier</div><h2 class="anton">Wähle deinen Kampf<span class="kanji k2">組手</span></h2><p>Anfänger und Fortgeschrittene im selben Ring. Vom ersten Bandagieren bis zum Sparring – und wenn du willst, bis in den Wettkampf.</p></div>
+ <div class="bracket">
+  <div class="bout reveal"><div class="r">Rd<b>1</b></div><div><h3>Klassisches Boxen</h3><p>Stand, Deckung, Beinarbeit, Kombinationen. Das Handwerk.</p></div><span class="kj">拳</span></div>
+  <div class="bout reveal"><div class="r">Rd<b>2</b></div><div><h3>Thai- &amp; Kickboxen</h3><p>Fäuste, Tritte, Knie. Explosiv und gnadenlos ehrlich.</p></div><span class="kj">蹴</span></div>
+  <div class="bout reveal"><div class="r">Rd<b>3</b></div><div><h3>Frauen Fitness Boxen</h3><p>Kondition, Schnelligkeit, Konzentration, Technik.</p></div><span class="kj">力</span></div>
+  <div class="bout reveal"><div class="r">Rd<b>4</b></div><div><h3>Jugend Boxen</h3><p>Respekt und Selbstvertrauen für die Champions von morgen.</p></div><span class="kj">若</span></div>
+  <div class="bout reveal"><div class="r">Rd<b>5</b></div><div><h3>Kraft &amp; Cardio</h3><p>Freie Gewichte, Kraftstationen, Cardio-Geräte.</p></div><span class="kj">鋼</span></div>
+  <div class="bout reveal"><div class="r">Rd<b>6</b></div><div><h3>Personaltraining</h3><p>Eins gegen eins mit lizenzierten Trainern.</p></div><span class="kj">道</span></div>
  </div>
 </div></section>
 
-<section id="rundenuhr" class="timer"><div class="wrap tbox">
- <div class="reveal"><div class="kicker">Gratis Werkzeug</div><h2 class="display h2">Die Rundenuhr.</h2>
- <p class="sub">Zuhause am Sandsack, im Park, beim Schattenboxen: drei Minuten Arbeit, eine Minute Pause, mit Gong. Wie im Club, nur in deiner Hosentasche.</p></div>
- <div class="reveal">
-  <div class="seg" role="group" aria-label="Rundenlänge"><button data-w="120">2:00</button><button data-w="180" class="on">3:00</button><button data-w="10">Test 0:10</button></div>
-  <div class="clock" id="clock"><svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fg" id="arc" cx="60" cy="60" r="52"/></svg>
-   <div class="lbl"><div class="t" id="tm">3:00</div><div class="ph" id="ph">Runde 1 · bereit</div></div></div>
-  <div class="tctl" style="margin-top:20px"><button class="btn" id="go">▶ Start</button><button class="btn ghost" id="rs">Reset</button></div>
+<section id="halle" style="padding-top:20px"><div class="wrap">
+ <div class="hd reveal"><div class="kick">Der Dojo</div><h2 class="anton">Die Halle</h2></div>
+ <div class="gal">
+  <div class="vhsframe wide reveal"><span class="lbl">CAM 1 · RING</span><img src="assets/ring.jpg" alt="Boxring" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 2</span><img src="assets/bags.jpg" alt="Sandsäcke" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 3</span><img src="assets/gloves.jpg" alt="Boxhandschuhe" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 4</span><img src="assets/bag.jpg" alt="Sandsack" loading="lazy"></div>
+  <div class="vhsframe reveal"><span class="lbl">CAM 5</span><img src="assets/ring3.jpg" alt="Ring" loading="lazy"></div>
+ </div>
+ <p class="credit">ARCHIV: CHALLENGE CLUB® STAMMHAUS SACHSENHAUSEN</p>
+</div></section>
+
+<section id="rundenuhr" class="timer"><div class="wrap">
+ <div class="hd reveal" style="text-align:center"><div class="kick">Für Zuhause</div><h2 class="anton">Ring frei</h2><p style="margin-inline:auto">Die Rundenuhr für Sandsack und Schattenboxen. Drei Minuten Krieg, eine Minute Ecke. Mit Gong.</p></div>
+ <div class="deck reveal" id="deck">
+  <div class="lcd"><div class="st" id="ph">RUNDE 01 · STANDBY</div><div class="tm" id="tm">3:00</div></div>
+  <div class="seg"><button data-w="120">2:00</button><button data-w="180" class="on">3:00</button><button data-w="10">TEST</button></div>
+  <div class="keys"><button class="btn" id="go">▶ Play</button><button class="btn ghost" id="rs">■ Stop</button></div>
  </div>
 </div></section>
 
-<section id="jugend" class="youth"><div class="wrap">
- <span class="big" aria-hidden="true">NEXT</span>
- <div class="reveal"><div class="kicker">Jugend &amp; Events</div><h2 class="display h2">Wir geben Talenten ihren ersten Kampf.</h2>
- <p class="sub">Der Challenge Club ist nicht nur Trainingsort, sondern auch Veranstalter. Talentierte Kinder und Jugendliche sammeln bei uns ihre ersten Kampferfahrungen – und unsere Boxer stehen auf den großen Bühnen.</p></div>
- <div class="events">
-  <div class="ev reveal"><div class="d"><b>14</b><span>Nov 26</span></div><div><h4>German Boxing Series 4 · demnächst</h4><p>XPOST Köln Arena – Challenge-Club-Boxer am Start.</p></div></div>
-  <div class="ev reveal"><div class="d"><b>21</b><span>Mär 26</span></div><div><h4>Kinder &amp; Jugend Box-Gala · Rückblick</h4><p>Die eigene Gala des Clubs – erste Kämpfe, große Bühne.</p></div></div>
+<section id="einladung"><div class="wrap">
+ <div class="inv reveal">
+  <div class="seal"><span>挑</span></div>
+  <div class="kick">Persönliche Einladung</div>
+  <div class="kanji">挑戦</div>
+  <h3 class="anton chrome">Dein erster Kampf</h3>
+  <p>Kein Turnier im Verborgenen. Nur du, der Sandsack und ein Trainer, der weiß, was er tut. Komm zum Probetraining und finde heraus, was in dir steckt.</p>
+  <ul><li>Sportkleidung, Hallenschuhe, Handtuch, Wasser</li><li>Bandagen &amp; Handschuhe gibt's an der Theke</li><li>Termin nach kurzer Absprache</li></ul>
+  <a class="btn gold" href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">Einladung annehmen</a>
  </div>
-</div></section>
-
-<section style="padding-top:0"><div class="wrap">
- <div class="values reveal">
-  <div><b>Respekt</b><span>vor jedem Gegner</span></div>
-  <div><b>Selbst&shy;vertrauen</b><span>das bleibt</span></div>
-  <div><b>Spaß</b><span>an harter Arbeit</span></div>
-  <div><b>Teamgeist</b><span>in jeder Runde</span></div>
- </div>
-</div></section>
-
-<section id="probetraining" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
- <div class="reveal"><div class="kicker">Probetraining</div><h2 class="display h2">Der erste Schritt in den Ring.</h2>
- <p class="sub">Komm vorbei, lern die Grundlagen und teste deine Fitness. Danach weißt du, welches Training zu dir passt.</p></div>
- <div class="steps">
-  <div class="step reveal"><div><h4>Melde dich</h4><p>Kurze Nachricht über Instagram oder einfach während der Öffnungszeiten vorbeikommen.</p></div></div>
-  <div class="step reveal"><div><h4>Bring Sportsachen mit</h4><p>Sportkleidung, Hallenschuhe, Handtuch und Wasser. Bandagen und Handschuhe kannst du an der Theke bekommen.</p></div></div>
-  <div class="step reveal"><div><h4>Steig ein</h4><p>Ein Trainer zeigt dir Bandagieren, Stand und erste Schläge. Ab dann zählt nur noch die nächste Runde.</p></div></div>
- </div>
- <div class="ctas reveal" style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">Probetraining anfragen →</a><a class="btn ghost" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" target="_blank" rel="noopener">Route planen</a></div>
-</div></section>
-
-<section id="standort"><div class="wrap">
- <div class="reveal"><div class="kicker">Standort</div><h2 class="display h2">Mitten in Offenbach.</h2></div>
- <div class="loc" style="margin-top:28px">
-  <div class="panel reveal"><h3>Challenge Club Offenbach</h3><p style="font-size:19px;font-weight:700">Schreberstraße 6<br>63069 Offenbach am Main</p>
-   <p class="sub" style="margin:12px 0 20px">Boxen · Thai- &amp; Kickboxen · Frauen Fitness Boxen · Jugend · Fitness</p>
-   <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn sm" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" target="_blank" rel="noopener">In Maps öffnen</a><a class="btn sm ghost" href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">@challengeclub_offenbach</a></div></div>
-  <div class="panel hours reveal"><h3>Öffnungszeiten</h3><div><span>Montag – Freitag</span><b>14:00 – 22:00</b></div><div><span>Wochenende</span><b>auf Anfrage</b></div><div><span>Probetraining</span><b>jederzeit</b></div></div>
+ <div class="info">
+  <div class="box reveal"><h4>Austragungsort</h4><p style="font-size:20px;line-height:1.35">Challenge Club® Offenbach<br>Schreberstraße 6<br>63069 Offenbach am Main</p><p style="margin-top:16px"><a class="btn sm" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" target="_blank" rel="noopener">Route planen</a></p></div>
+  <div class="box reveal"><h4>Öffnungszeiten</h4><div class="row"><span>Montag – Freitag</span><b>14:00 – 22:00</b></div><div class="row"><span>Wochenende</span><b>auf Anfrage</b></div><div class="row"><span>Instagram</span><b><a href="https://www.instagram.com/challengeclub_offenbach/" target="_blank" rel="noopener">@challengeclub_offenbach</a></b></div></div>
  </div>
 </div></section>
 </main>
 
-<footer><div class="wrap row">
- <div><b style="color:var(--ink)">CHALLENGE CLUB® OFFENBACH</b><br>Boxen mit Herz – seit 2010.</div>
- <div>Konzeptentwurf · Inhalte vor Veröffentlichung mit dem Club abstimmen.</div>
+<footer><div class="wrap">
+ <div class="plate"><img src="assets/logo.png" alt="Challenge Club®"></div>
+ <p class="osd" style="font-size:20px;color:#ddd">MUT · DISZIPLIN · STÄRKE — SEIT 2010</p>
+ <p style="margin-top:12px;opacity:.7">Konzeptentwurf · Fotos &amp; Logo © Challenge Club® · vor Veröffentlichung mit dem Club abstimmen · <a href="modern/">Moderne Variante</a></p>
 </div></footer>
 
-<div class="dock" id="dock"><a class="btn" href="#probetraining">Probetraining</a><a class="btn ghost" href="https://maps.google.com/?daddr=Schreberstra%C3%9Fe+6,+63069+Offenbach+am+Main" aria-label="Route">📍</a></div>
+<div class="dock" id="dock"><a class="btn" href="#einladung">▶ Probetraining</a></div>
 
 <script>
-const hdr=document.getElementById('hdr'),dock=document.getElementById('dock');
-addEventListener('scroll',()=>{const y=scrollY;hdr.classList.toggle('solid',y>30);dock.classList.toggle('show',y>innerHeight*.6)},{passive:true});
+const dock=document.getElementById('dock');addEventListener('scroll',()=>dock.classList.toggle('show',scrollY>innerHeight*.7),{passive:true});
 const rv=document.querySelectorAll('.reveal');
-if(!('IntersectionObserver' in window)||/static/.test(location.search)){rv.forEach(el=>el.classList.add('in'))}else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});rv.forEach(el=>io.observe(el))}
-// round timer
-const C=2*Math.PI*52,arc=document.getElementById('arc'),tm=document.getElementById('tm'),ph=document.getElementById('ph'),clock=document.getElementById('clock'),go=document.getElementById('go');
-arc.style.strokeDasharray=C;let work=180,rest=60,left=work,phase='work',round=1,iv=null,ac=null;
-const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
-function bell(n=1){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();for(let i=0;i<n;i++){const t=ac.currentTime+i*.45,o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=880;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.6,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+1.2);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+1.3)}}catch(e){}if(navigator.vibrate)navigator.vibrate(n>1?[200,120,200]:300)}
-function draw(){const tot=phase==='work'?work:rest;tm.textContent=fmt(left);arc.style.strokeDashoffset=C*(1-left/tot);clock.classList.toggle('rest',phase==='rest');ph.textContent=(phase==='work'?'Runde '+round:'Pause')+(iv?'':' · bereit')}
-function tick(){left--;if(left===10&&phase==='work')bell(1);if(left<=0){if(phase==='work'){phase='rest';left=rest;bell(2)}else{phase='work';round++;left=work;bell(1)}}draw()}
-go.onclick=()=>{if(iv){clearInterval(iv);iv=null;go.textContent='▶ Weiter'}else{if(left===work&&phase==='work'&&round===1)bell(1);iv=setInterval(tick,1000);go.textContent='❚❚ Pause'}draw()};
-document.getElementById('rs').onclick=()=>{clearInterval(iv);iv=null;phase='work';round=1;left=work;go.textContent='▶ Start';draw()};
+if(!('IntersectionObserver' in window)||/static/.test(location.search)){rv.forEach(e=>e.classList.add('in'))}else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.06});rv.forEach(e=>io.observe(e))}
+const tm=document.getElementById('tm'),ph=document.getElementById('ph'),deck=document.getElementById('deck'),go=document.getElementById('go');
+let work=180,rest=60,left=work,phase='work',round=1,iv=null,ac=null;
+const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0'),p2=n=>String(n).padStart(2,'0');
+function bell(n){try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<n;i++){const t=ac.currentTime+i*.5;[620,1240,1860].forEach((f,k)=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.45/(k+1),t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+1.6);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+1.7)})}}catch(e){}if(navigator.vibrate)navigator.vibrate(n>1?[250,150,250,150,250]:400)}
+function draw(){tm.textContent=fmt(left);deck.classList.toggle('rest',phase==='rest');ph.textContent=(phase==='work'?'RUNDE '+p2(round):'ECKE · PAUSE')+(iv?' · ▶ PLAY':' · STANDBY')}
+function tick(){left--;if(left===10&&phase==='work')bell(1);if(left<=0){if(phase==='work'){phase='rest';left=rest;bell(3)}else{phase='work';round++;left=work;bell(1)}}draw()}
+go.onclick=()=>{if(iv){clearInterval(iv);iv=null;go.textContent='▶ Play'}else{if(left===work&&phase==='work')bell(1);iv=setInterval(tick,1000);go.textContent='❚❚ Pause'}draw()};
+document.getElementById('rs').onclick=()=>{clearInterval(iv);iv=null;phase='work';round=1;left=work;go.textContent='▶ Play';draw()};
 document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');work=+b.dataset.w;rest=work===10?5:60;document.getElementById('rs').click()});
 draw();
 </script>
